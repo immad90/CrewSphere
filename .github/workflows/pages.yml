@@ -1,4 +1,4 @@
-name: Deploy CrewSphere to GitHub Pages
+name: Deploy ForceVera to GitHub Pages
 
 on:
   push:
