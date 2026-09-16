@@ -1,0 +1,37 @@
+/* ForceVera product walkthrough */
+.howto-section{position:relative;overflow:hidden;background:linear-gradient(145deg,#031323 0%,#062743 58%,#07375b 100%);color:#fff;padding:92px 0}
+.howto-section:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-180px;top:-220px;background:radial-gradient(circle,rgba(5,216,232,.18),transparent 68%);pointer-events:none}
+.howto-section:after{content:"";position:absolute;width:440px;height:440px;border-radius:50%;left:-230px;bottom:-270px;background:radial-gradient(circle,rgba(8,124,255,.18),transparent 68%);pointer-events:none}
+.howto-section .wrap{position:relative;z-index:2}
+.howto-head{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:34px}
+.howto-head-copy{max-width:760px}
+.howto-section .kicker{color:#65d9ff}
+.howto-head h2{margin-top:10px;max-width:780px}
+.howto-head h2 span{color:#28c9ff}
+.howto-head p{max-width:680px;margin:15px 0 0;color:#abc1d2;font-size:15px;line-height:1.72}
+.howto-badge{flex:0 0 auto;display:flex;align-items:center;gap:10px;padding:11px 15px;border:1px solid rgba(123,211,255,.2);border-radius:999px;background:rgba(255,255,255,.055);color:#c7dfed;font-size:12px;font-weight:800;white-space:nowrap}
+.howto-badge i{display:block;width:8px;height:8px;border-radius:50%;background:#20d5bd;box-shadow:0 0 0 6px rgba(32,213,189,.1)}
+.howto-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(330px,.8fr);gap:26px;align-items:stretch}
+.howto-video-card{border:1px solid rgba(103,199,255,.2);border-radius:22px;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));box-shadow:0 30px 80px rgba(0,0,0,.26)}
+.howto-video-top{height:42px;display:flex;align-items:center;gap:9px;padding:0 7px;color:#bed4e3;font-size:11px;font-weight:800;letter-spacing:.02em}
+.howto-video-top .live-dot{width:8px;height:8px;border-radius:50%;background:#16d4c2;box-shadow:0 0 14px rgba(22,212,194,.7)}
+.howto-video-top span:last-child{margin-left:auto;color:#7f9aae;font-weight:700}
+.howto-video-frame{position:relative;border-radius:15px;overflow:hidden;background:#020d18;aspect-ratio:16/9;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
+.howto-video-frame video{width:100%;height:100%;display:block;object-fit:contain;background:#020d18}
+.howto-video-fallback{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:30px;background:radial-gradient(circle at 70% 10%,rgba(14,129,232,.28),transparent 38%),#06182a;color:#bdd3e4}
+.howto-video-fallback strong{display:block;color:#fff;font-size:18px;margin-bottom:8px}
+.howto-video-note{display:flex;align-items:center;gap:9px;padding:13px 8px 4px;color:#8ea8bb;font-size:11px;line-height:1.5}
+.howto-video-note b{color:#c9dfed}
+.howto-steps{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.howto-step{position:relative;min-height:142px;padding:19px 17px;border:1px solid rgba(120,192,235,.13);border-radius:16px;background:rgba(5,25,44,.62);transition:transform .22s ease,border-color .22s ease,background .22s ease}
+.howto-step:hover{transform:translateY(-3px);border-color:rgba(48,188,255,.42);background:rgba(8,39,66,.78)}
+.howto-step-num{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#0d78f2,#16bddf);color:#fff;font-size:11px;font-weight:900;box-shadow:0 8px 20px rgba(7,126,240,.2)}
+.howto-step h3{font-size:14px;margin-top:12px;letter-spacing:-.02em}
+.howto-step p{margin:6px 0 0;color:#8fa9bc;font-size:11px;line-height:1.55}
+.howto-flow{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)}
+.howto-flow span{display:inline-flex;align-items:center;gap:8px;color:#a8bece;font-size:11px;font-weight:800}
+.howto-flow span:not(:last-child):after{content:"→";color:#2abdf2;margin-left:5px;font-size:15px}
+.howto-flow b{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:rgba(19,143,255,.13);color:#53cdf8;font-size:13px}
+@media(max-width:980px){.howto-head{align-items:flex-start}.howto-grid{grid-template-columns:1fr}.howto-steps{grid-template-columns:repeat(3,1fr)}.howto-step{min-height:132px}}
+@media(max-width:680px){.howto-section{padding:64px 0}.howto-head{display:block}.howto-badge{width:max-content;margin-top:18px}.howto-grid{gap:18px}.howto-video-card{padding:8px;border-radius:17px}.howto-video-top{height:38px}.howto-steps{grid-template-columns:1fr 1fr}.howto-step{min-height:138px}.howto-flow{justify-content:flex-start;gap:9px}.howto-flow span:not(:last-child):after{display:none}}
+@media(max-width:430px){.howto-steps{grid-template-columns:1fr}.howto-step{min-height:auto}}
