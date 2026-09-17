@@ -1,0 +1,37 @@
+name: Install compressed ForceVera video
+
+on:
+  push:
+    paths:
+      - '.video-upload/READY'
+
+permissions:
+  contents: write
+
+jobs:
+  install-video:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Rebuild compressed MP4
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .video-upload/part-*.b64 | tr -d '\n\r' | base64 --decode > assets/forcevera-product-overview.mp4
+          test "$(stat -c%s assets/forcevera-product-overview.mp4)" = "1584608"
+          echo "702deb89930b94096edf38e3fbf3192b81b5f95e369751b73b79b80f7e1fce6b  assets/forcevera-product-overview.mp4" | sha256sum -c -
+
+      - name: Commit compressed video
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "ForceVera Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f assets/forcevera-product-overview.mp4
+          git rm -r .video-upload
+          git commit -m "Replace ForceVera overview with compressed web video"
+          git push origin HEAD:main
