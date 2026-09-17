@@ -26,14 +26,14 @@ if(industryStrip&&whySection){
           <h2>From shift planning to <span>verified field activity.</span></h2>
           <p>See how operations teams use ForceVera to plan coverage, deploy officers, verify attendance and patrol activity, capture incidents, and keep clients informed from one connected platform.</p>
         </div>
-        <div class="howto-badge"><i></i> 82-second product walkthrough</div>
+        <div class="howto-badge"><i></i> Product walkthrough</div>
       </div>
       <div class="howto-grid">
         <div class="howto-video-card">
           <div class="howto-video-top"><span class="live-dot"></span> ForceVera Product Overview <span>Security workforce. Simplified.</span></div>
           <div class="howto-video-frame">
             <video id="forceveraOverview" controls playsinline preload="metadata" aria-label="ForceVera product walkthrough">
-              <source src="assets/forcevera-product-overview.mp4" type="video/mp4">
+              <source src="assets/video/ForceVera_Product_Overview.mp4" type="video/mp4">
               Your browser does not support HTML5 video.
             </video>
             <div class="howto-video-fallback" id="forceveraVideoFallback"><div><strong>ForceVera walkthrough</strong><span>The product video is being prepared for playback.</span></div></div>
